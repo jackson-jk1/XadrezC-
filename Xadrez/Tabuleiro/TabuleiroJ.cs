@@ -7,13 +7,18 @@ namespace Tabuleiro
 
        private Peca[,] pecas;
 
-    public Tabuleiro(int linhas, int colunas){
+    public TabuleiroJ(int linhas, int colunas){
         this.Linhas = linhas;
         this.Colunas = colunas;
         this.pecas = new Peca[linhas,colunas];
     }
     public Peca peca(int linha, int coluna){
       return pecas[linha,coluna];
+   }
+
+   public void colocarPeca(Peca p, Posicao pos){
+    pecas[pos.Linha,pos.Coluna] = p;
+    p.Posicao = pos;
    }
     }
 }

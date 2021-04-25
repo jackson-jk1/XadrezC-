@@ -11,14 +11,13 @@ namespace Tabuleiro
         public TabuleiroJ Tab {get;protected set;}
    
 
-   public Peca(Posicao posicao, Cor cor, int quantMovimento, TabuleiroJ tab){
-       Posicao = posicao;
+   public Peca(Cor cor,TabuleiroJ tab){
+       Posicao = null;
        Cor = cor;
-       QuantMovimento = quantMovimento;
+       QuantMovimento = 0;
        Tab = tab;
    }
 
-   
-   
-   }
+    
+    }
 }

@@ -1,7 +1,9 @@
-namespace Xadrez.Tabuleiro
+namespace Tabuleiro
 {
-    public class Cor
+    public enum Cor
     {
+        Branca,
+        Preta,
         
     }
 }
