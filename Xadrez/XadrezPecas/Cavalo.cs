@@ -11,9 +11,9 @@ namespace XadrezPecas
         public override string ToString()
         {
             if (Cor == Cor.Branca)
-            return "♘";
+            return " ♘ ";
             else
-            return "♞";
+            return " ♞ ";
         }
     }
 }

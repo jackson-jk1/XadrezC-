@@ -18,6 +18,8 @@ namespace Tabuleiro
        Tab = tab;
    }
 
-    
+    public void contaMov(){
+      QuantMovimento++;
+    }
     }
 }
