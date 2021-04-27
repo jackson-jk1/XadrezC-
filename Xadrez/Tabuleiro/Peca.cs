@@ -1,6 +1,6 @@
 namespace Tabuleiro
 {
-    public class Peca
+    public abstract class Peca
     {
         public Posicao Posicao {get;set;}
 
@@ -21,5 +21,7 @@ namespace Tabuleiro
     public void contaMov(){
       QuantMovimento++;
     }
+
+    public abstract bool [,] movimentosPossiveis();
     }
 }

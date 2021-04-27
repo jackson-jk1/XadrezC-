@@ -7,6 +7,11 @@ namespace XadrezPecas
         {
         }
 
+        public override bool[,] movimentosPossiveis()
+        {
+            throw new System.NotImplementedException();
+        }
+
         public override string ToString()
         {
             if (Cor == Cor.Branca)

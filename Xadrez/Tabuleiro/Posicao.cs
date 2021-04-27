@@ -9,5 +9,9 @@ namespace Tabuleiro
           Coluna = coluna;
           Linha = linha;
       }
+      public void definirValores (int linha, int coluna){
+          Coluna = coluna;
+          Linha = linha;
     }
+ }
 }

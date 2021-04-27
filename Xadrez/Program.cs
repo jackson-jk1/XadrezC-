@@ -19,9 +19,12 @@ namespace Xadrez
                 Console.BackgroundColor = ConsoleColor.Black;
                 Console.Write("Origem: ");
                 Posicao origem = Tela.lerPosicaoXadrez().ToPosicao();
-                Console.WriteLine("Destino: ");
+                Console.Clear();
+                bool[,] posicaoPosivel = partida.tab.peca(origem).movimentosPossiveis();
+                Tela.ImprimirTabulheiro(partida.tab, posicaoPosivel);
+                Console.BackgroundColor = ConsoleColor.Black;
+                Console.Write("Destino: ");
                 Posicao destino = Tela.lerPosicaoXadrez().ToPosicao();
-
                 partida.movimenta(origem,destino);
             }
           

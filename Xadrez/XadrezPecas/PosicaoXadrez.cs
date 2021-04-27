@@ -13,7 +13,7 @@ namespace XadrezPecas
         }
         public Posicao ToPosicao(){
 
-         return new Posicao(8 - Linha,Coluna - 'a');
+         return new Posicao(8 - Linha, Coluna - 'a');
        
         }
         public override string ToString()

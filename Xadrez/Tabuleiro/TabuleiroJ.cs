@@ -1,3 +1,5 @@
+using System;
+
 namespace Tabuleiro
 {
     public class TabuleiroJ
@@ -5,7 +7,7 @@ namespace Tabuleiro
        public int Linhas {get;set;}
        public int Colunas {get;set;} 
 
-       private Peca[,] pecas;
+       private Peca[,] pecas = new Peca[8,8];
 
     public TabuleiroJ(int linhas, int colunas){
         this.Linhas = linhas;
@@ -45,7 +47,7 @@ namespace Tabuleiro
 
     }
    public bool posiVal(Posicao pos){
-     if(pos.Linha <0 ||pos.Linha > Linhas|| pos.Coluna < 0|| pos.Coluna > Colunas){
+     if(pos.Linha <0 ||pos.Linha > 7|| pos.Coluna < 0|| pos.Coluna > 7){
          return false;
      }
      return true;
