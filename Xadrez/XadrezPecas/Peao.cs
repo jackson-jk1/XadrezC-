@@ -26,6 +26,11 @@ namespace XadrezPecas
            if(Tab.posiVal(pos) && movimentosPeao(pos)){
                mat[pos.Linha,pos.Coluna] = true;
            }
+             pos.definirValores(Posicao.Linha + 1, Posicao.Coluna);
+
+           if(Tab.posiVal(pos) && movimentosPeao(pos)){
+               mat[pos.Linha,pos.Coluna] = true;
+           }
            return mat;
            
            }

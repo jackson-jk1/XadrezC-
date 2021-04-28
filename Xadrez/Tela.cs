@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Tabuleiro;
 using XadrezPecas;
 
@@ -6,6 +7,37 @@ namespace Xadrez
 {
     public class Tela
     {
+        public static void imprimirPartida(PatidaDeXadrez patida){
+            ImprimirTabulheiro(patida.tab);
+            Console.WriteLine();
+            imprimirPecasCapturadas(patida);
+             Console.WriteLine();
+            Console.WriteLine("Turno: " + patida.Turno);
+            Console.WriteLine("Agurdando jogada " + patida.JogadorAtual);
+            
+
+        }
+
+       public static void imprimirPecasCapturadas(PatidaDeXadrez partida){
+            Console.BackgroundColor = ConsoleColor.Black;
+           Console.WriteLine("Pecas capturadas");
+           Console.Write("Pecas Brancas: ");
+           imprimirConjunto(partida.pecasCapturadas(Cor.Branca));
+           Console.WriteLine();
+           Console.Write("Pecas Pretas: ");
+           imprimirConjunto(partida.pecasCapturadas(Cor.Preta));
+
+
+       }
+       public static void imprimirConjunto(HashSet<Peca> pecas){
+            Console.Write("[ ");
+           foreach (var item in pecas)
+           {
+                Console.Write(item.ToString() + " ");
+           }
+             Console.Write("]");
+           
+       }
         public static void ImprimirTabulheiro(TabuleiroJ tab){
             int k = 0;
              for (int i = 0; i< tab.Linhas; i++,k++){
@@ -37,6 +69,7 @@ namespace Xadrez
             k=0;
             Console.BackgroundColor = ConsoleColor.Red;
             Console.WriteLine("   A  B  C  D  E  F  G  H ");
+              Console.BackgroundColor = ConsoleColor.Black;
         }
  
           public static void imprimirPeca(Peca peca , int k){
@@ -70,6 +103,7 @@ namespace Xadrez
                         Console.ForegroundColor = ConsoleColor.Black;
                         Console.Write(peca);
                         Console.ForegroundColor = aux;
+                        
                     }
               
                  }   
@@ -125,5 +159,6 @@ namespace Xadrez
             return new PosicaoXadrez(coluna, linha);
 
         }
+
     }
 }
